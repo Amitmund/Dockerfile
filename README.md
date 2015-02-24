@@ -21,3 +21,8 @@ git push -u origin master
 You can initialize this repository with code from a Subversion, Mercurial, or TFS project.
 
 ## All the Dockerfile are under the sub-directory of this repo.
+
+
+## Example of building image from github docker file.
+docker build -t "amit_ubuntu_apache" git://github.com/Amitmund/docker_ubuntu_apache/
+### Not yet got the luck to directly call the subfolder repo Dockerfile
