@@ -12,4 +12,4 @@ docker run -it -d --hostname=apachephp --name=apachephp  -p 9999:80 -e "containe
 docker exec -it apachephp /bin/bash -c "systemctl status httpd"
 
 #Once the container start
-go to > http://hostip
+go to > http://hostip:9999
