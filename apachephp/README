@@ -1,0 +1,15 @@
+#To build from the DockerFile #
+#There a period at the end in the following line.
+# Note the tag name should not have the caps letter.
+docker build -t apachephp:latest .
+
+
+#to start the image#
+# binding container's port 80 to host's 9999 port
+docker run -it -d --hostname=apachephp --name=apachephp  -p 9999:80 -e "container=docker" --privileged=true -d --security-opt seccomp:unconfined --cap-add=SYS_ADMIN -v /sys/fs/cgroup:/sys/fs/cgroup:ro apachephp:latest bash -c "/usr/sbin/init"
+
+#to check the service #
+docker exec -it apachephp /bin/bash -c "systemctl status httpd"
+
+#Once the container start
+go to > http://hostip
