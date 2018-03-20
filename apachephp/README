@@ -13,3 +13,16 @@ docker exec -it apachephp /bin/bash -c "systemctl status httpd"
 
 #Once the container start
 go to > http://hostip:9999
+
+
+###############
+ADD go /usr/local/
+will copy the contents of your local go directory in the /usr/local/ directory of your docker image.
+
+To copy the go directory itself in /usr/local/ use:
+
+ADD go /usr/local/go
+or
+
+COPY go /usr/local/go
+#################
