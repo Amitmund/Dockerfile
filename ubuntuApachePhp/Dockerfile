@@ -12,7 +12,8 @@ RUN apt-get install -y php5
 
 # Apache config
 
-
+# Copy few files.
+COPY info.php /var/www/html/
 
 EXPOSE 80
 CMD /usr/sbin/apache2ctl -D FOREGROUND
